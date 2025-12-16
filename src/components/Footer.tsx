@@ -248,11 +248,11 @@ const Footer = () => {
             <Box
               display="flex"
               flexDirection="column"
-              alignItems={{ xs: "center", md: "flex-start" }}
+              alignItems={{ xs: "center", md: "right" }}
             >
               <Typography
                 sx={{
-                  mb: 0,
+                  ml:0,
                   color: "white",
                   fontWeight: "bold",
                   fontSize: { xs: "20px", md: "16px" }
