@@ -1,9 +1,9 @@
-import { TypographyOptions } from "@mui/material/styles/createTypography"
+import type { ThemeOptions } from "@mui/material/styles"
 
 /**
  * Establece la tipografía
  */
-const typography: TypographyOptions = {
+const typography: ThemeOptions["typography"] = {
   fontSize: 10,
   fontFamily: "Inter, sans-serif"
 }

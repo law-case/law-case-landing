@@ -1,9 +1,10 @@
 import { Box, Divider, Paper, Stack, Typography } from "@mui/material"
+import React from "react"
 
 import { cardContaninerStyle, contentCardsStyle, titleCardsStyle } from "../FeaturesView.styles"
 
 interface FeaturesViewProps {
-  icon?: JSX.Element
+  icon?: React.ReactElement
   title?: string
   content?: string
 }

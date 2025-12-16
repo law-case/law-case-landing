@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react"
 import { Box, Stack } from "@mui/material"
+import React from "react"
 
 import FeaturesCard from "./FeaturesCard"
 
 interface Feature {
-  icon: JSX.Element
+  icon: React.ReactElement
   title: string
   content: string
 }

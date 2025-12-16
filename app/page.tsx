@@ -5,6 +5,7 @@ import { Demo } from "@/src/views/Demo"
 import { CtaFinal } from "@/src/views/CtaFinal"
 import FeaturesView from "@/src/views/features/FeaturesView"
 import LandingTestimonies from "@/src/views/LandingTestimonies"
+import Footer from "@/src/components/Footer"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <LandingTestimonies />
       <Demo />
       <CtaFinal />
+      <Footer />
     </Stack>
   )
 }

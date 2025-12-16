@@ -56,7 +56,7 @@ export const CtaFinal = () => {
         </Typography>
         <Button
           variant="outlined"
-          href="/auth/register"
+          href="https://lawcase.app/auth/register"
           sx={{
             backgroundColor: theme.palette.primary.dark,
             width: "max-content",
