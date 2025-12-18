@@ -76,16 +76,24 @@ const FeaturesView = () => {
 
   return (
     <Stack id="features" sx={pageContainerStyle}>
-      <Box>
+      <Box data-aos="fade-up">
         <Typography sx={titlePagesStyle}>Toda tu actividad legal en una sola plataforma</Typography>
       </Box>
       {isMobile ? (
         <FeaturesCarousel features={featuresContent} />
       ) : (
         <Stack direction="row" justifyContent="center" alignItems="center" spacing={5}>
-          <FeatureCardsList features={featuresContent} start={0} end={3} />
-          {!isTablet && <DeviceImage />}
-          <FeatureCardsList features={featuresContent} start={3} end={6} />
+          <Box data-aos="fade-right" data-aos-delay="100">
+            <FeatureCardsList features={featuresContent} start={0} end={3} />
+          </Box>
+          {!isTablet && (
+            <Box data-aos="zoom-in" data-aos-delay="200">
+              <DeviceImage />
+            </Box>
+          )}
+          <Box data-aos="fade-left" data-aos-delay="100">
+            <FeatureCardsList features={featuresContent} start={3} end={6} />
+          </Box>
         </Stack>
       )}
     </Stack>

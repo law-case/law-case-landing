@@ -1,7 +1,8 @@
 "use client"
 
-import { Button, Stack, Typography } from "@mui/material"
+import { Stack, Typography } from "@mui/material"
 import theme from "@/styles/theme"
+import SubscriptionInput from "@/src/components/SubscriptionInput"
 
 const LandingHero = () => {
   return (
@@ -37,6 +38,8 @@ const LandingHero = () => {
         }}
       >
         <Typography
+          data-aos="fade-up"
+          data-aos-delay="100"
           variant="h4"
           color="primary.contrastText"
           fontWeight="bold"
@@ -59,6 +62,8 @@ const LandingHero = () => {
           Organiza tus procesos legales desde una sola plataforma.
         </Typography>
         <Typography
+          data-aos="fade-up"
+          data-aos-delay="200"
           variant="h6"
           color="primary.contrastText"
           sx={{
@@ -78,31 +83,10 @@ const LandingHero = () => {
           direction="row"
           spacing={{ xs: 1, sm: 3 }}
           justifyContent={{ xs: "center", sm: "start" }}
+          data-aos="fade-up"
+          data-aos-delay="300"
         >
-          <Button
-            variant="outlined"
-            href="https://lawcase.app/auth/register"
-            sx={{
-              backgroundColor: theme.palette.primary.dark,
-              width: 120,
-              fontSize: { xs: "0.6rem", sm: "0.7rem" },
-              py: { xs: 0.5, sm: 1 }
-            }}
-          >
-            Probar la beta
-          </Button>
-          <Button
-            variant="outlined"
-            href="#demo"
-            sx={{
-              backgroundColor: "transparent",
-              width: 120,
-              fontSize: { xs: "0.6rem", sm: "0.7rem" },
-              py: { xs: 0.5, sm: 1 }
-            }}
-          >
-            Ver demo
-          </Button>
+          <SubscriptionInput variant="light" />
         </Stack>
       </Stack>
       <Stack
@@ -119,6 +103,8 @@ const LandingHero = () => {
         }}
       >
         <img
+          data-aos="fade-left"
+          data-aos-delay="400"
           src="/assets/hero-image.svg"
           alt="Imagen demostrativa de la interfaz de la aplicacion"
           style={{

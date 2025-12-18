@@ -1,6 +1,7 @@
 "use client"
 
 import { Stack, Typography } from "@mui/material"
+import theme from "@/styles/theme"
 
 export const Demo = () => {
   return (
@@ -8,6 +9,7 @@ export const Demo = () => {
       id="demo"
       sx={{
         background: `URL(/assets/descriptionBg.svg), URL(/assets/demoBg.svg)`,
+        backgroundColor: theme.palette.primary.main,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -22,6 +24,7 @@ export const Demo = () => {
       }}
     >
       <Typography
+        data-aos="fade-up"
         align="center"
         variant="h4"
         sx={{ color: "common.white", fontWeight: "bold", marginTop: 4 }}
@@ -29,6 +32,8 @@ export const Demo = () => {
         Sumate a la beta y transformá tu gestión legal
       </Typography>
       <Typography
+        data-aos="fade-up"
+        data-aos-delay="100"
         variant="h6"
         color="primary.contrastText"
         sx={{ textAlign: "center", width: { xs: "80%", sm: "40%" } }}
@@ -39,6 +44,8 @@ export const Demo = () => {
       </Typography>
       {/* Contenedor responsivo para mantener relación de aspecto 16:9 */}
       <Stack
+        data-aos="zoom-in"
+        data-aos-delay="200"
         sx={{
           justifyContent: "center",
           alignItems: "center",

@@ -5,6 +5,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter"
 import { ThemeProvider } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import theme from "@/src/styles/theme"
+import AOSProvider from "@/src/components/AOSProvider"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +18,69 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "LawCase - Gestión Legal",
-  description: "Plataforma legal para la gestión digital de casos",
+  metadataBase: new URL('https://lawcase.app'),
+  title: {
+    default: "LawCase - Plataforma de Gestión Legal | Gestioná tus Casos Judiciales",
+    template: "%s | LawCase"
+  },
+  description: "LawCase es la plataforma digital para abogados y estudios jurídicos. Gestioná casos, documentos, tareas y calendarios desde una sola aplicación web. Sumate a la beta abierta gratis.",
+  keywords: [
+    "gestión legal",
+    "software para abogados",
+    "plataforma jurídica",
+    "gestión de casos",
+    "estudio jurídico digital",
+    "lawtech",
+    "tecnología legal",
+    "abogados Argentina",
+    "expedientes digitales",
+    "CRM legal",
+    "gestión de causas"
+  ],
+  authors: [{ name: "LawCase Team" }],
+  creator: "LawCase",
+  publisher: "LawCase",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://lawcase.app",
+    siteName: "LawCase",
+    title: "LawCase - Plataforma de Gestión Legal para Abogados",
+    description: "Transformá tu gestión legal con LawCase. Organizá casos, documentos y tareas desde una plataforma intuitiva. Beta abierta y gratuita.",
+    images: [
+      {
+        url: "/assets/hero-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "LawCase - Plataforma de Gestión Legal",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LawCase - Plataforma de Gestión Legal para Abogados",
+    description: "Transformá tu gestión legal con LawCase. Organizá casos, documentos y tareas desde una plataforma intuitiva.",
+    images: ["/assets/hero-image.svg"],
+  },
+  verification: {
+    // Agregar verification tokens cuando estén disponibles
+    // google: 'google-site-verification-code',
+  },
+  alternates: {
+    canonical: "https://lawcase.app",
+  },
+  category: "Legal Technology",
 }
 
 export default function RootLayout({
@@ -32,7 +94,9 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            {children}
+            <AOSProvider>
+              {children}
+            </AOSProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

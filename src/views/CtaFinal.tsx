@@ -1,10 +1,11 @@
 "use client"
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
-import { Box, Button, Stack, Typography } from "@mui/material"
+import { Box, Stack, Typography } from "@mui/material"
 import Link from "next/link"
 import DiscordIcon from "@/components/DiscordIcon"
 import theme from "@/styles/theme"
+import SubscriptionInput from "@/src/components/SubscriptionInput"
 
 export const CtaFinal = () => {
   return (
@@ -23,6 +24,7 @@ export const CtaFinal = () => {
       }}
     >
       <Box
+        data-aos="fade-up"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -54,21 +56,12 @@ export const CtaFinal = () => {
           queremos hacerlo con vos. Probá LawCase en su versión beta, explorá sus funciones y
           compartinos tu feedback para ayudarnos a mejorar.
         </Typography>
-        <Button
-          variant="outlined"
-          href="https://lawcase.app/auth/register"
-          sx={{
-            backgroundColor: theme.palette.primary.dark,
-            width: "max-content",
-            fontSize: { xs: "0.6rem", sm: "0.7rem" },
-            py: { xs: 0.5, sm: 1 }
-          }}
-        >
-          Ingresá a la beta gratis
-        </Button>
+        <SubscriptionInput variant="light" />
       </Box>
 
       <Box
+        data-aos="fade-up"
+        data-aos-delay="200"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -116,6 +109,8 @@ export const CtaFinal = () => {
         </Box>
       </Box>
       <Typography
+        data-aos="fade-up"
+        data-aos-delay="400"
         variant="h6"
         sx={{
           color: "primary.contrastText",

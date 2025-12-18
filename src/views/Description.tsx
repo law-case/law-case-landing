@@ -1,12 +1,14 @@
 "use client"
 
 import { Box, Stack, Typography } from "@mui/material"
+import theme from "@/styles/theme"
 
 export const Description = () => {
   return (
     <Stack
       sx={{
         backgroundImage: `url(/assets/descriptionBg.svg)`,
+        backgroundColor: theme.palette.primary.main,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -21,19 +23,22 @@ export const Description = () => {
       }}
     >
       <Typography
+        data-aos="fade-up"
         variant="h4"
         sx={{ color: "primary.contrastText", fontWeight: "bold", marginTop: { xs: 6, sm: 4 } }}
       >
         ¿Qué es LawCase (beta)?
       </Typography>
       <Typography
+        data-aos="fade-up"
+        data-aos-delay="100"
         variant="h6"
         sx={{ color: "primary.contrastText", width: { xs: "80%", sm: "40%" }, textAlign: "center" }}
       >
         El derecho está cambiando y los abogados enfrentan el desafío de adaptarse a nuevas formas
         de trabajo.
       </Typography>
-      <Box sx={{ display: "flex", gap: 1, width: { xs: "80%", sm: "40%" } }}>
+      <Box data-aos="fade-up" data-aos-delay="200" sx={{ display: "flex", gap: 1, width: { xs: "80%", sm: "40%" } }}>
         <Typography variant="h6" sx={{ color: "primary.contrastText", textAlign: "center" }}>
           <strong>LawCase (beta)</strong> nace para acompañar esa transformación: una plataforma
           legal diseñada para la gestión digital de casos, que hoy lanzamos en beta abierta para que
@@ -41,6 +46,8 @@ export const Description = () => {
         </Typography>
       </Box>
       <Box
+        data-aos="zoom-in"
+        data-aos-delay="300"
         sx={{
           marginX: { xs: 2, sm: 0 },
           backgroundColor: "black",
