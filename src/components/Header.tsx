@@ -64,7 +64,7 @@ const Header = () => {
                       alt="LawCase Logo"
                       width={220}
                       height={60}
-                      sx={{ width: "60%",  cursor: "pointer", marginButton: "40%" }}
+              style={{ width: "60%", cursor: "pointer", marginBottom: "10%" }}
                     />
                   </Link>
                 </Box>
