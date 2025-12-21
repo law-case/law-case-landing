@@ -109,7 +109,7 @@ const Footer = () => {
                   borderRadius: 2
                 }}
               >
-                <Link href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target="_blank">
+                <Link href={process.env.NEXT_PUBLIC_LINKEDIN_URL || "#"} target="_blank">
                   <LinkedInIcon
                     sx={{
                       fontSize: 24,
@@ -119,7 +119,7 @@ const Footer = () => {
                     }}
                   />
                 </Link>
-                <Link href={process.env.NEXT_PUBLIC_DISCORD_URL} target="_blank">
+                <Link href={process.env.NEXT_PUBLIC_DISCORD_URL || "#"} target="_blank">
                   <DiscordIcon width={"24px"} height={"24px"} color={"white"} />
                 </Link>
               </Box>
@@ -166,7 +166,7 @@ const Footer = () => {
                 alignItems={{ xs: "center", sm: "center", md: "flex-start" }}
               >
                 <Link
-                  href={`${process.env.NEXT_PUBLIC_APP_URL}/terms`}
+                  href={`${process.env.NEXT_PUBLIC_BETA_APP_URL}/terms`}
                   style={{
                     color: "#D8D8D8",
                     textDecoration: "none",

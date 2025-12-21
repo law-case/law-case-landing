@@ -159,7 +159,7 @@ NEXT_PUBLIC_GOOGLE_SCRIPT_URL="https://script.google.com/macros/s/SCRIPT_ID/exec
 NEXT_PUBLIC_GA_TRACKING_ID="G-XXXXXXXXXX"
 
 # Social Links
-NEXT_PUBLIC_DISCORD_URL="https://discord.gg/kEmHYQ6S"
+NEXT_PUBLIC_DISCORD_URL="https://discord.gg/****"
 NEXT_PUBLIC_LINKEDIN_URL="https://linkedin.com/company/lawcase"
 NEXT_PUBLIC_TWITTER_URL="https://twitter.com/lawcase"
 NEXT_PUBLIC_INSTAGRAM_URL="https://instagram.com/lawcase"
