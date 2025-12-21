@@ -151,8 +151,7 @@ Create a `.env.local` file in the root directory:
 ```env
 # Application
 NEXT_PUBLIC_APP_NAME="LawCase"
-NEXT_PUBLIC_APP_URL="https://lawcase.app"
-NEXT_PUBLIC_BETA_APP_URL="https://beta.lawcase.app"
+NEXT_PUBLIC_APP_URL="https://beta.lawcase.app"
 
 # API & Integrations
 NEXT_PUBLIC_GOOGLE_SCRIPT_URL="https://script.google.com/macros/s/SCRIPT_ID/exec"

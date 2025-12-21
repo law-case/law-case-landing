@@ -166,7 +166,7 @@ const Footer = () => {
                 alignItems={{ xs: "center", sm: "center", md: "flex-start" }}
               >
                 <Link
-                  href={`${process.env.NEXT_PUBLIC_BETA_APP_URL}/terms`}
+                  href={`${process.env.NEXT_PUBLIC_APP_URL}/terms`}
                   style={{
                     color: "#D8D8D8",
                     textDecoration: "none",
