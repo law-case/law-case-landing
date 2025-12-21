@@ -82,12 +82,12 @@ const Header = () => {
                 flex: "0 0 auto"
               }}
             >
-              <Link href="https://beta.lawcase.app/faq" style={{ textDecoration: "none" }}>
+              <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/faq`} style={{ textDecoration: "none" }}>
                 <Typography
                   variant="body1"
                   sx={{
                     cursor: "pointer",
-                    color: "secondary.main",
+                    color: "primary.contrastText",
                     fontWeight: 400,
                     fontSize: { xs: "0.875rem", sm: "15px" },
                     "&:hover": {
@@ -95,10 +95,10 @@ const Header = () => {
                     }
                   }}
                 >
-                  FAQ´s
+                  Ayuda
                 </Typography>
               </Link>
-              {/* <Link href="https://beta.lawcase.app/auth/login" style={{ textDecoration: "none" }}>
+              <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/auth/login`} style={{ textDecoration: "none" }}>
                 <Button
                   variant="contained"
                   sx={{
@@ -117,7 +117,7 @@ const Header = () => {
                 >
                   Ingresar
                 </Button>
-              </Link> */}
+              </Link>
             </Box>
           </Toolbar>
         </Container>

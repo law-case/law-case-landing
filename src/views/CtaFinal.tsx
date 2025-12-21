@@ -93,7 +93,7 @@ export const CtaFinal = () => {
             borderRadius: 2
           }}
         >
-          <Link href="https://linkedin.com/company/lawcase" target="_blank">
+          <Link href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target="_blank">
             <LinkedInIcon
               sx={{
                 fontSize: 40,
@@ -103,7 +103,7 @@ export const CtaFinal = () => {
               }}
             />
           </Link>
-          <Link href="https://discord.gg/kEmHYQ6S" target="_blank">
+          <Link href={process.env.NEXT_PUBLIC_DISCORD_URL} target="_blank">
             <DiscordIcon width={"40px"} height={"40px"} color={"white"} />
           </Link>
         </Box>
