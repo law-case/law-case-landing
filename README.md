@@ -47,7 +47,6 @@ lawcase-landing/
 │   │   ├── LandingHero.tsx     # Hero section
 │   │   ├── Description.tsx      # Product description
 │   │   ├── Demo.tsx             # Video demo section
-│   │   ├── LandingTestimonies.tsx
 │   │   ├── CtaFinal.tsx        # Final call-to-action
 │   │   └── features/
 │   │       ├── FeaturesView.tsx
@@ -101,11 +100,27 @@ pnpm install
 Create a `.env.local` file in the root directory:
 
 ```env
-NEXT_PUBLIC_GOOGLE_SCRIPT_URL=your-google-apps-script-url
-NEXT_PUBLIC_DISCORD_URL=https://discord.gg/your-invite
-NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/company/your-company
+# Newsletter subscription endpoint (Google Apps Script)
+NEXT_PUBLIC_GOOGLE_SCRIPT_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
+
+# Social media links
+NEXT_PUBLIC_DISCORD_URL=https://discord.gg/kEmHYQ6S
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/company/lawcase
+
+# Main application URL (beta subdomain)
 NEXT_PUBLIC_APP_URL=https://beta.lawcase.app
 ```
+
+**Environment Variables Description:**
+
+| Variable | Description | Required | Example |
+|----------|-------------|----------|----------|
+| `NEXT_PUBLIC_GOOGLE_SCRIPT_URL` | Google Apps Script endpoint for newsletter subscriptions | Yes | `https://script.google.com/...` |
+| `NEXT_PUBLIC_DISCORD_URL` | Discord community invite link | Yes | `https://discord.gg/kEmHYQ6S` |
+| `NEXT_PUBLIC_LINKEDIN_URL` | LinkedIn company page URL | Yes | `https://linkedin.com/company/lawcase` |
+| `NEXT_PUBLIC_APP_URL` | Main application base URL (beta subdomain) | Yes | `https://beta.lawcase.app` |
+
+> **Note:** All variables prefixed with `NEXT_PUBLIC_` are exposed to the browser and safe for client-side usage.
 
 4. **Run development server**
 
@@ -114,6 +129,19 @@ npm run dev
 ```
 
 Visit [http://localhost:3000](http://localhost:3000) to see the application.
+
+## 🌍 Subdomain Architecture
+
+LawCase uses a multi-subdomain architecture:
+
+- **`lawcase.app`** - Marketing landing page (this repository)
+- **`beta.lawcase.app`** - Beta application (main app for early adopters)
+- **Future:** `app.lawcase.app` - Production application
+
+**Navigation Flow:**
+- Landing page CTAs redirect to `beta.lawcase.app/auth/login`
+- Help and Terms links point to `beta.lawcase.app/faq` and `beta.lawcase.app/terms`
+- All environment variables reference the beta subdomain
 
 ## 📦 Build & Deploy
 
@@ -254,6 +282,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - UI components by [Material-UI](https://mui.com/)
 - Animations by [AOS](https://michalsnik.github.io/aos/)
 - Deployed on [Vercel](https://vercel.com/)
+
+---
+
+## 🔄 Open to Change
+
+This project is **actively maintained and open to improvements**. We welcome:
+
+- 🐛 Bug reports and fixes
+- 💡 Feature suggestions
+- 🎨 Design improvements
+- 📝 Documentation enhancements
+- 🌍 Localization contributions
+- ⚡ Performance optimizations
+
+Feel free to open an issue or submit a pull request. All contributions are reviewed and appreciated!
 
 ---
 
