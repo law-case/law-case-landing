@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import theme from "@/src/styles/theme"
 import AOSProvider from "@/src/components/AOSProvider"
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -97,6 +98,7 @@ export default function RootLayout({
             <AOSProvider>
               {children}
             </AOSProvider>
+            <Analytics />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

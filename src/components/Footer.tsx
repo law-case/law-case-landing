@@ -51,7 +51,7 @@ const Footer = () => {
                 <Box p={0}>
                   <Link href="/" style={{ textDecoration: "none" }}>
                     <Logo
-                      size={{ xs: 144, sm: 144, md: 40 }}
+                      size={{ xs: 144, sm: 144, md: 60 }}
                       sx={{ display: "block", cursor: "pointer" }}
                     />
                   </Link>
@@ -64,16 +64,23 @@ const Footer = () => {
                     textDecorationThickness: 2,
                     textDecorationStyle: "solid",
                     textUnderlineOffset: 0,
+                    ml: { xs: 0, lg: 2},
+                     
 
                   }}
                 >
-                  <Link href="/" style={{ textDecoration: "none" }}>
+                  <Link href="/" style={{ textDecoration: "none",  }}>
                     <Image
                       src="/logo.png"
                       alt="LawCase Logo"
-                      width={220}
+                      width={160}
                       height={60}
-                      style={{ width: "60%", cursor: "pointer", marginBottom: "10%" }}
+                      style={{ 
+                        width: "100%", 
+                        maxWidth: "600px",
+                        height: "auto", 
+                        cursor: "pointer",
+                      }}
                     />
                   </Link>
                 </Box>
@@ -82,7 +89,6 @@ const Footer = () => {
                 sx={{
                   color: "#D8D8D8",
                   textAlign: { xs: "center", md: "left" },
-                  m: 2,
                   fontSize: { xs: "24px", md: "20px" },
                   fontWeight: 200
                 }}

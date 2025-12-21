@@ -26,7 +26,7 @@ export const Description = () => {
       <Typography
         data-aos="fade-up"
         variant="h4"
-        sx={{ color: "primary.contrastText", fontWeight: "bold", marginTop: { xs: 12, sm: 4 } }}
+        sx={{ color: "primary.contrastText", fontWeight: "bold", marginTop: { xs: 20, sm: 10 } }}
       >
         ¿Qué es LawCase (beta)?
       </Typography>

@@ -72,7 +72,7 @@ const LandingHero = () => {
           sx={{
             textAlign: { xs: "center", sm: "left" },
             fontSize: {
-              xs: "8px",
+              xs: "14px",
               sm: "0.5rem",
               md: "1rem"
             },
@@ -99,7 +99,7 @@ const LandingHero = () => {
           paddingTop: { xs: "50px", sm: 0 },
           top: { sm: "50%" },
           transform: { xs: "translateY(0%)", sm: "translateY(-50%)" },
-          width: { xs: "90%", sm: "40%", lg: "35%" },
+          width: { xs: "80%", sm: "40%", lg: "35%" },
           marginTop: { xs: "20px", sm: 0 },
           alignSelf: { xs: "flex-end", sm: "auto" },
           mr: { xs: 1, sm: 0 },

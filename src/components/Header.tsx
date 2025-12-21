@@ -64,7 +64,7 @@ const Header = () => {
                       alt="LawCase Logo"
                       width={220}
                       height={60}
-              style={{ width: "60%", cursor: "pointer", marginBottom: "10%" }}
+              style={{ width: "60%", cursor: "pointer", marginBottom: 0 }}
                     />
                   </Link>
                 </Box>
@@ -87,7 +87,7 @@ const Header = () => {
                   variant="body1"
                   sx={{
                     cursor: "pointer",
-                    color: "primary.contrastText",
+                    color: "secondary.main",
                     fontWeight: 400,
                     fontSize: { xs: "0.875rem", sm: "15px" },
                     "&:hover": {
@@ -95,10 +95,10 @@ const Header = () => {
                     }
                   }}
                 >
-                  Ayuda
+                  FAQ´s
                 </Typography>
               </Link>
-              <Link href="https://beta.lawcase.app/auth/login" style={{ textDecoration: "none" }}>
+              {/* <Link href="https://beta.lawcase.app/auth/login" style={{ textDecoration: "none" }}>
                 <Button
                   variant="contained"
                   sx={{
@@ -117,7 +117,7 @@ const Header = () => {
                 >
                   Ingresar
                 </Button>
-              </Link>
+              </Link> */}
             </Box>
           </Toolbar>
         </Container>
