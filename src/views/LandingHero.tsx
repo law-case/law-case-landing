@@ -1,6 +1,7 @@
 "use client"
 
 import { Stack, Typography } from "@mui/material"
+import Image from "next/image"
 import theme from "@/styles/theme"
 import SubscriptionInput from "@/src/components/SubscriptionInput"
 
@@ -33,7 +34,7 @@ const LandingHero = () => {
           height: { sm: "100vh" },
           pt: {
             xs: 12,
-            sm: 0
+            sm: 12
           }
         }}
       >
@@ -48,29 +49,32 @@ const LandingHero = () => {
             textAlign: { xs: "center", sm: "left" },
             fontSize: {
               xs: "1.4rem",
-              sm: "1.5rem",
-              md: "2rem",
+              sm: "0.8rem",
+              md: "1rem",
               lg: "2.5rem"
             },
-            "@media (min-width: 200px) and (max-width: 400px)": {
-              fontSize: "20px"
+           
+         
+ mt: {
+              xs: 0,
+              sm: "50%",
+              md: 0
             },
-            mt: 0,
             width: { xs: "100%", sm: "65%", md: "100%" }
           }}
         >
-          Organiza tus procesos legales desde una sola plataforma.
+          Organizá tus procesos legales desde una sola plataforma.
         </Typography>
         <Typography
           data-aos="fade-up"
           data-aos-delay="200"
-          variant="h6"
           color="primary.contrastText"
           sx={{
             textAlign: { xs: "center", sm: "left" },
             fontSize: {
-              xs: ".8rem",
-              sm: "1rem"
+              xs: "8px",
+              sm: "0.5rem",
+              md: "1rem"
             },
             width: { xs: "100%", sm: "55%", md: "90%" }
           }}
@@ -102,11 +106,14 @@ const LandingHero = () => {
           right: 0
         }}
       >
-        <img
+        <Image
           data-aos="fade-left"
           data-aos-delay="400"
           src="/assets/hero-image.svg"
           alt="Imagen demostrativa de la interfaz de la aplicacion"
+          width={600}
+          height={450}
+          priority
           style={{
             width: "100%",
             height: "auto"

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
-import { Box, Button, Container, Input, Typography, Stack } from "@mui/material"
+import { Box, Container, Typography, Stack } from "@mui/material"
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "@/components/Logo"
@@ -10,7 +10,6 @@ import CustomSnackbar from "@/src/components/CustomSnackbar"
 import DiscordIcon from "@/components/DiscordIcon"
 
 const Footer = () => {
-  const [email, setEmail] = useState("")
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
@@ -19,63 +18,6 @@ const Footer = () => {
 
   const handleCloseSnackbar = () => {
     setSnackbar({ ...snackbar, open: false })
-  }
-
-  const handleSubscribe = async () => {
-    // Regex from OWASP validation patterns to prevent ReDoS.
-    if (
-      !email ||
-      !/^[a-zA-Z0-9_+&*-]+(?:\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,7}$/.test(email)
-    ) {
-      setSnackbar({
-        open: true,
-        message: "Por favor, ingresa un correo electrónico válido.",
-        severity: "error"
-      })
-      return
-    }
-
-    const rawScriptURL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL
-
-    try {
-      // Limpiamos la URL para remover comillas que pueden venir del archivo .env
-      const cleanScriptURL = rawScriptURL?.replace(/"/g, "") || ""
-
-      const response = await fetch(cleanScriptURL, {
-        method: "POST",
-        redirect: "follow",
-        headers: {
-          "Content-Type": "text/plain;charset=utf-8"
-        },
-        body: JSON.stringify({ email })
-      })
-
-      const data = await response.json()
-
-      if (data.result === "success") {
-        setSnackbar({
-          open: true,
-          message: "¡Gracias por suscribirte! Te mantendremos informado.",
-          severity: "success"
-        })
-        setEmail("")
-      } else if (data.result === "already_subscribed") {
-        setSnackbar({
-          open: true,
-          message: "Este correo electrónico ya se encuentra suscrito.",
-          severity: "info"
-        })
-      } else {
-        throw new Error(data.message || "Falló la solicitud de suscripción.")
-      }
-    } catch (error) {
-      console.error("Error al suscribir:", (error as Error).message)
-      setSnackbar({
-        open: true,
-        message: "Ocurrió un error al suscribirte. Por favor, intenta de nuevo más tarde.",
-        severity: "error"
-      })
-    }
   }
 
   return (
@@ -116,22 +58,22 @@ const Footer = () => {
                 </Box>
                 <Box
                   sx={{
-                    textAlign: { xs: "center", md: "left" },
-                    marginLeft: { xs: 0, md: "5%" },
+                    alignText: {xs: "center", lg: "left"},
                     lineHeight: 1.8,
                     textDecoration: "underline",
                     textDecorationThickness: 2,
                     textDecorationStyle: "solid",
-                    textUnderlineOffset: 0
+                    textUnderlineOffset: 0,
+
                   }}
                 >
                   <Link href="/" style={{ textDecoration: "none" }}>
                     <Image
                       src="/logo.png"
                       alt="LawCase Logo"
-                      width={120}
-                      height={40}
-                      style={{ width: "60%", marginLeft: "0", cursor: "pointer" }}
+                      width={220}
+                      height={60}
+                      sx={{ width: "60%",  cursor: "pointer", marginButton: "40%" }}
                     />
                   </Link>
                 </Box>
@@ -140,7 +82,7 @@ const Footer = () => {
                 sx={{
                   color: "#D8D8D8",
                   textAlign: { xs: "center", md: "left" },
-                  mb: 2,
+                  m: 2,
                   fontSize: { xs: "24px", md: "20px" },
                   fontWeight: 200
                 }}
@@ -244,7 +186,7 @@ const Footer = () => {
           </Box>
 
           {/* Subscríbete ahora */}
-          <Box sx={{ flex: { xs: "1 1 100%", md: "1 1 25%" } }}>
+          {/* <Box sx={{ flex: { xs: "1 1 100%", md: "1 1 25%" } }}>
             <Box
               display="flex"
               flexDirection="column"
@@ -297,7 +239,7 @@ const Footer = () => {
                 </Box>
               </Box>
             </Box>
-          </Box>
+          </Box> */}
         </Stack>
 
         {/* Copyright */}

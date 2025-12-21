@@ -92,7 +92,7 @@ const contentCardsStyle: SxProps<Theme> = {
 const titlePagesStyle: SxProps<Theme> = {
   color: "secondary.light",
   fontSize: {
-    xs: "2.5rem",
+    xs: "1.5rem",
     sm: "2rem",
     md: "2rem",
     lg: "2rem"

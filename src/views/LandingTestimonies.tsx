@@ -26,7 +26,7 @@ const LandingTestimonies = () => {
         ¿Qué dicen nuestros usuarios?
       </Typography>
       <Typography variant="h6" align="center" maxWidth={600} mt={2} p={1}>
-        Descubre cómo LawCase (beta) ha transformado la forma en que los estudios jurídicos
+        Descubrí cómo LawCase (beta) ha transformado la forma en que los estudios jurídicos
         gestionan sus casos, optimizan sus procesos y fortalecen la relación con sus clientes. Estas
         experiencias reales reflejan el impacto positivo que nuestra plataforma tiene en el día a
         día de profesionales del derecho.

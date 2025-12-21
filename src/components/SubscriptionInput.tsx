@@ -28,7 +28,7 @@ const SubscriptionInput: React.FC<SubscriptionInputProps> = ({ variant = "dark" 
     ) {
       setSnackbar({
         open: true,
-        message: "Por favor, ingresa un correo electrónico válido.",
+        message: "Por favor, ingresá un correo electrónico válido.",
         severity: "error"
       })
       return
@@ -71,7 +71,7 @@ const SubscriptionInput: React.FC<SubscriptionInputProps> = ({ variant = "dark" 
       console.error("Error al suscribir:", (error as Error).message)
       setSnackbar({
         open: true,
-        message: "Ocurrió un error al suscribirte. Por favor, intenta de nuevo más tarde.",
+        message: "Ocurrió un error al suscribirte. Por favor, intentá de nuevo más tarde.",
         severity: "error"
       })
     }
@@ -131,7 +131,7 @@ const SubscriptionInput: React.FC<SubscriptionInputProps> = ({ variant = "dark" 
           textAlign: "center"
         }}
       >
-        Mantente informado sobre novedades y actualizaciones
+        Seguí informado sobre novedades y actualizaciones
       </Typography>
     </Box>
   )

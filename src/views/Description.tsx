@@ -1,6 +1,7 @@
 "use client"
 
 import { Box, Stack, Typography } from "@mui/material"
+import Image from "next/image"
 import theme from "@/styles/theme"
 
 export const Description = () => {
@@ -13,7 +14,7 @@ export const Description = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         width: "100%",
-        height: "auto",
+        height: "80%",
         display: "flex",
         paddingBottom: 4,
         flexDirection: "column",
@@ -25,7 +26,7 @@ export const Description = () => {
       <Typography
         data-aos="fade-up"
         variant="h4"
-        sx={{ color: "primary.contrastText", fontWeight: "bold", marginTop: { xs: 6, sm: 4 } }}
+        sx={{ color: "primary.contrastText", fontWeight: "bold", marginTop: { xs: 12, sm: 4 } }}
       >
         ¿Qué es LawCase (beta)?
       </Typography>
@@ -85,7 +86,13 @@ export const Description = () => {
             }}
           />
         </Box>
-        <img src="/assets/descriptionImg.svg" alt="" width="100%" height="100%" />
+        <Image
+          src="/assets/descriptionImg.svg"
+          alt="LawCase Dashboard Interface"
+          width={800}
+          height={600}
+          style={{ width: "100%", height: "auto" }}
+        />
       </Box>
     </Stack>
   )

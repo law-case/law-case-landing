@@ -42,13 +42,13 @@ export const CtaFinal = () => {
             textAlign: "center"
           }}
         >
-          Ingresa hoy a nuestra beta abierta y transformá tu gestión legal
+          Ingresá a nuestra beta abierta y transformá tu gestión legal
         </Typography>
         <Typography
           variant="h6"
           sx={{
             color: "primary.contrastText",
-            width: { xs: "80%", sm: "40%", md: "90%" },
+            width: { xs: "80%", sm: "100%", md: "90%" },
             textAlign: "center"
           }}
         >
@@ -74,7 +74,7 @@ export const CtaFinal = () => {
           variant="h6"
           sx={{
             color: "primary.contrastText",
-            width: { xs: "80%", sm: "40%", md: "60%" },
+            width: { xs: "80%", sm: "100%", md: "90%" },
             textAlign: "center",
             fontSize: 12
           }}
