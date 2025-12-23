@@ -1,9 +1,12 @@
 "use client"
 
-import { Stack, Typography } from "@mui/material"
+import { Box, Stack, Typography } from "@mui/material"
 import Image from "next/image"
+import Link from "next/link"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import theme from "@/styles/theme"
 import SubscriptionInput from "@/src/components/SubscriptionInput"
+import DiscordIcon from "@/components/DiscordIcon"
 
 const LandingHero = () => {
   return (
@@ -92,6 +95,33 @@ const LandingHero = () => {
         >
           <SubscriptionInput variant="light" />
         </Stack>
+        <Box
+          display="flex"
+          gap={3}
+          justifyContent={{ xs: "center", sm: "start" }}
+          data-aos="fade-up"
+          data-aos-delay="400"
+          sx={{
+            opacity: 0.8,
+            px: 2,
+            py: 1,
+            borderRadius: 2
+          }}
+        >
+          <Link href={process.env.NEXT_PUBLIC_LINKEDIN_URL || "#"} target="_blank">
+            <LinkedInIcon
+              sx={{
+                fontSize: 40,
+                color: "white",
+                cursor: "pointer",
+                "&:hover": { color: "secondary.main" }
+              }}
+            />
+          </Link>
+          <Link href={process.env.NEXT_PUBLIC_DISCORD_URL || "#"} target="_blank">
+            <DiscordIcon width={"40px"} height={"40px"} color={"white"} />
+          </Link>
+        </Box>
       </Stack>
       <Stack
         sx={{

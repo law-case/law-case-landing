@@ -1,6 +1,6 @@
 "use client"
 
-import { AppBar, Box, Button, Container, Slide, Toolbar, Typography } from "@mui/material"
+import { AppBar, Box, Button, Container, Slide, Toolbar } from "@mui/material"
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "@/components/Logo"
@@ -82,7 +82,7 @@ const Header = () => {
                 flex: "0 0 auto"
               }}
             >
-              <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/faq`} style={{ textDecoration: "none" }}>
+              {/* <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/faq`} style={{ textDecoration: "none" }}>
                 <Typography
                   variant="body1"
                   sx={{
@@ -97,7 +97,7 @@ const Header = () => {
                 >
                   Ayuda
                 </Typography>
-              </Link>
+              </Link> */}
               <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/auth/login`} style={{ textDecoration: "none" }}>
                 <Button
                   variant="contained"
