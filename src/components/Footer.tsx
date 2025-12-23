@@ -156,9 +156,7 @@ const Footer = () => {
               flexDirection="column"
               alignItems={{ xs: "center", md: "flex-start" }}
             >
-              <Typography variant="h6" sx={{ mb: 0, color: "white", fontWeight: "bold" }}>
-                Enlaces
-              </Typography>
+            
               <Box
                 display="flex"
                 flexDirection="column"
