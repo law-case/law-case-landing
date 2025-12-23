@@ -98,26 +98,6 @@ const Header = () => {
                   Ayuda
                 </Typography>
               </Link> */}
-              <Link href={`${process.env.NEXT_PUBLIC_APP_URL}/auth/login`} style={{ textDecoration: "none" }}>
-                <Button
-                  variant="contained"
-                  sx={{
-                    bgcolor: "secondary.main",
-                    color: "black",
-                    fontWeight: 500,
-                    fontSize: { xs: "0.75rem", sm: "0.875rem" },
-                    px: { xs: 2, sm: 3 },
-                    py: { xs: 0.5, sm: 1 },
-                    textTransform: "none",
-                    borderRadius: 1,
-                    "&:hover": {
-                      bgcolor: "secondary.dark"
-                    }
-                  }}
-                >
-                  Ingresar
-                </Button>
-              </Link>
             </Box>
           </Toolbar>
         </Container>
