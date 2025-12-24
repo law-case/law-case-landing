@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     images: ["/assets/hero-image.svg"],
   },
   verification: {
-    google: 'google795ae835b1e3b032',
+    google: 'iNyo-myMoy5hVJQjNUOXxvzd5gAdHOCss_2DsdNPuek',
   },
   alternates: {
     canonical: "https://lawcase.app",
